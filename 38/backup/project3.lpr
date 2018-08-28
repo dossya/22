@@ -1,15 +1,15 @@
 program project3;
 
 const
-  N = 4;
+  N = 30;
 var
   a: array[1..N] of integer;
   i, l, lmax: integer;
 
 begin
-   for i:=1 to N do
-   read(a[i]);
-    l := 0;
+  for i := 1 to N do
+    readln(a[i]);
+  l := 0;
   lmax := 0;
   for i := 1 to N do
   begin
@@ -20,9 +20,8 @@ begin
     else
       l := 0;
     if (lmax < l) then
-
       lmax := l;
   end;
   writeln(lmax);
-  readln(l);
+  readln();
 end.

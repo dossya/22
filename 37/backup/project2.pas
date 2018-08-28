@@ -1,7 +1,7 @@
 program project2;
 
 const
-  N = 6;
+  N = 3;
 var
 
   a: array [1..N] of integer;
@@ -32,5 +32,5 @@ begin
     end;
   end;
   writeln(smax);
-  readln(l);
+  readln();
 end.

@@ -1,7 +1,7 @@
 program project2;
 
 const
-  N = 30;
+  N = 3;
 var
 
   a: array [1..N] of integer;
@@ -9,7 +9,7 @@ var
 
 begin
   for i := 1 to N do
-    Read(a[i]);
+    readln(a[i]);
   l := 1;
   s := a[1];
   lmax := 0;
@@ -32,5 +32,5 @@ begin
     end;
   end;
   writeln(smax);
-  readln(l);
+  readln();
 end.

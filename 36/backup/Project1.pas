@@ -1,27 +1,23 @@
 program Project1;
 
+const
+  N = 3;
 var
-  a: array [1.. 10000] of integer;
-  N, M, s, smax, k,i: integer;
+  a: array [1..N] of integer;
+  kmax, k, i: integer;
 begin
-  readln(N, M);
-  for i := 1 to M do
-    Read(a[i]);
-  s := 1;
-  smax := 1;
-  for i := 1 to M - 1 do
-    if (a[i] = a[i + 1]) and (s >= smax) then
-    begin
-      s := s + 1;
-      k := i;
-      if (smax < s) then
-        smax := s;
-      if (smax = s) then
-      begin
-        if (k > i) then
-          k := i;
-      end;
-    end;
-  writeln(a[k]);
-  ReadLn();
+  for i := 1 to N do
+    readln(a[i]);
+  k := 1;
+  kmax := 0;
+  for i := 1 to N - 1 do
+    if (a[i] = a[i + 1]) then begin
+      k := k + 1;
+      if (kmax < k) then
+    kmax := k;
+    end
+    else
+      k := 1;
+  writeln(kmax);
+  readln();
 end.
